@@ -25,17 +25,18 @@ jobs:
       - name: Accept SDK licenses
         run: yes | sdkmanager --licenses || true
 
-      - name: Generate Gradle Wrapper
-        working-directory: LiquidGlassIconPack
-        run: gradle wrapper --gradle-version 8.4
+      - name: Install Gradle 8.4 manually
+        run: |
+          wget -q https://services.gradle.org/distributions/gradle-8.4-bin.zip
+          unzip -q gradle-8.4-bin.zip -d /opt
+          echo "/opt/gradle-8.4/bin" >> $GITHUB_PATH
 
       - name: Build APK
         working-directory: LiquidGlassIconPack
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: liquid-glass-icon-pack-apk
           path: LiquidGlassIconPack/app/build/outputs/apk/debug/*.apk
-      
