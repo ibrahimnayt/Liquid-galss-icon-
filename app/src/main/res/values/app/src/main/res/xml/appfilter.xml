@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item component="ComponentInfo{com.android.dialer/com.android.dialer.DialtactsActivity}" drawable="ic_call" />
+    <item component="ComponentInfo{com.google.android.dialer/com.google.android.dialer.extensions.GoogleDialtactsActivity}" drawable="ic_call" />
+    <item component="ComponentInfo{com.samsung.android.dialer/com.samsung.android.dialer.DialtactsActivity}" drawable="ic_call" />
+
+    <item component="ComponentInfo{com.android.settings/com.android.settings.Settings}" drawable="ic_settings" />
+    <item component="ComponentInfo{com.samsung.android.settings/com.samsung.android.settings.Settings}" drawable="ic_settings" />
+
+    <item component="ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}" drawable="ic_facebook" />
+    <item component="ComponentInfo{com.facebook.katana/com.facebook.katana.activity.FbMainTabActivity}" drawable="ic_facebook" />
+</resources>
