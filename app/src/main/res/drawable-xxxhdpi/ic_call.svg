@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Ambient drop shadow for the entire glass plate -->
+    <filter id="plate-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#080f1e" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- Soft blur for inner casting shadows (glass refraction) -->
+    <filter id="element-shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.18 0"/>
+    </filter>
+
+    <!-- Radial gradient for the base glass plate fill -->
+    <radialGradient id="plate-fill-grad" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.12"/>
+    </radialGradient>
+
+    <!-- Linear gradient for the plate rim / bevel highlight -->
+    <linearGradient id="plate-rim-grad" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="25%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.08"/>
+      <stop offset="85%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Linear gradient for the secondary inner rim of the plate -->
+    <linearGradient id="plate-inner-rim-grad" x1="85%" y1="90%" x2="15%" y2="10%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- WhatsApp Bubble Fill (Frosted look) -->
+    <linearGradient id="bubble-fill-grad" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <!-- Bubble Rim (Thick glossy glass edge) -->
+    <linearGradient id="bubble-rim-grad" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.12"/>
+      <stop offset="85%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Handset Fill (Slightly more solid glass) -->
+    <linearGradient id="handset-fill-grad" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Handset Rim (Refractive thick edge) -->
+    <linearGradient id="handset-rim-grad" x1="15%" y1="15%" x2="85%" y2="85%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.75"/>
+    </linearGradient>
+
+    <!-- Glossy reflection gradient for the diagonal shine -->
+    <linearGradient id="gloss-reflection-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Clipping paths for the gloss shine overlays -->
+    <clipPath id="bubble-clip-path">
+      <path d="M359.65,153.17C331.93,125.46,295.11,110.20,256.00,110.20C175.56,110.20,110.12,175.64,110.12,256.00c0.00,25.67,6.72,50.76,19.43,72.73l-20.66,75.44l77.16-20.25c21.16,11.56,45.18,17.63,69.86,17.63c80.44,0.00,145.88-65.44,145.88-145.88C401.80,216.89,386.54,180.07,359.65,153.17z"/>
+    </clipPath>
+
+    <clipPath id="handset-clip-path">
+      <path d="M305.20,280.93c-4.26-2.13-25.26-12.46-29.19-13.86c-3.94-1.39-6.81-2.13-9.68,2.13c-2.87,4.26-11.07,13.86-13.53,16.73c-2.46,2.87-5.00,3.20-9.27,1.07c-4.26-2.13-17.96-6.64-34.28-21.16c-12.63-11.32-21.24-25.26-23.70-29.52c-2.46-4.26-0.25-6.56,1.89-8.69c1.97-1.89,4.26-5.00,6.40-7.46c2.13-2.46,2.87-4.26,4.26-7.13c1.39-2.87,0.74-5.33-0.33-7.46c-1.07-2.13-9.68-23.29-13.28-31.90c-3.53-8.53-7.13-7.38-9.68-7.46c-2.46-0.08-5.33-0.08-8.20-0.08c-2.87,0.00-7.46,1.07-11.40,5.33c-3.94,4.26-15.01,14.68-15.01,35.75c0.00,21.07,15.33,41.41,17.47,44.28c2.13,2.87,30.18,46.17,73.14,64.70c10.25,4.43,18.20,7.05,24.44,9.02c10.25,3.28,19.68,2.79,27.06,1.72c8.28-1.23,25.26-10.33,28.78-20.34c3.53-10.00,3.53-18.53,2.46-20.34C312.33,283.80,309.46,283.06,305.20,280.93z"/>
+    </clipPath>
+  </defs>
+
+  <!-- 1. BACKDROP AMBIENT SHADOWS -->
+  <circle cx="256" cy="256" r="232" fill="none" filter="url(#plate-shadow)"/>
+
+  <!-- 2. MAIN GLASS PLATE -->
+  <circle cx="256" cy="256" r="232" fill="url(#plate-fill-grad)"/>
+  <circle cx="256" cy="256" r="232" fill="none" stroke="url(#plate-rim-grad)" stroke-width="3"/>
+  <circle cx="256" cy="256" r="229" fill="none" stroke="url(#plate-inner-rim-grad)" stroke-width="1.5"/>
+  <ellipse cx="256" cy="255" rx="230" ry="229" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.35"/>
+
+  <!-- 3. WHATSAPP BUBBLE SECTION -->
+  <path d="M359.65,153.17C331.93,125.46,295.11,110.20,256.00,110.20C175.56,110.20,110.12,175.64,110.12,256.00c0.00,25.67,6.72,50.76,19.43,72.73l-20.66,75.44l77.16-20.25c21.16,11.56,45.18,17.63,69.86,17.63c80.44,0.00,145.88-65.44,145.88-145.88C401.80,216.89,386.54,180.07,359.65,153.17z" fill="#000000" filter="url(#element-shadow-filter)" transform="translate(1.5, 4)"/>
+  <path d="M359.65,153.17C331.93,125.46,295.11,110.20,256.00,110.20C175.56,110.20,110.12,175.64,110.12,256.00c0.00,25.67,6.72,50.76,19.43,72.73l-20.66,75.44l77.16-20.25c21.16,11.56,45.18,17.63,69.86,17.63c80.44,0.00,145.88-65.44,145.88-145.88C401.80,216.89,386.54,180.07,359.65,153.17z" fill="url(#bubble-fill-grad)"/>
+  <path d="M359.65,153.17C331.93,125.46,295.11,110.20,256.00,110.20C175.56,110.20,110.12,175.64,110.12,256.00c0.00,25.67,6.72,50.76,19.43,72.73l-20.66,75.44l77.16-20.25c21.16,11.56,45.18,17.63,69.86,17.63c80.44,0.00,145.88-65.44,145.88-145.88C401.80,216.89,386.54,180.07,359.65,153.17z" fill="none" stroke="url(#bubble-rim-grad)" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M359.65,153.17C331.93,125.46,295.11,110.20,256.00,110.20C175.56,110.20,110.12,175.64,110.12,256.00c0.00,25.67,6.72,50.76,19.43,72.73l-20.66,75.44l77.16-20.25c21.16,11.56,45.18,17.63,69.86,17.63c80.44,0.00,145.88-65.44,145.88-145.88C401.80,216.89,386.54,180.07,359.65,153.17z" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.75" stroke-linejoin="round"/>
+
+  <g clip-path="url(#bubble-clip-path)">
+    <ellipse cx="256" cy="115" rx="160" ry="80" fill="url(#gloss-reflection-grad)" transform="rotate(-28, 256, 115)"/>
+  </g>
+
+  <!-- 4. HANDSET SECTION -->
+  <path d="M305.20,280.93c-4.26-2.13-25.26-12.46-29.19-13.86c-3.94-1.39-6.81-2.13-9.68,2.13c-2.87,4.26-11.07,13.86-13.53,16.73c-2.46,2.87-5.00,3.20-9.27,1.07c-4.26-2.13-17.96-6.64-34.28-21.16c-12.63-11.32-21.24-25.26-23.70-29.52c-2.46-4.26-0.25-6.56,1.89-8.69c1.97-1.89,4.26-5.00,6.40-7.46c2.13-2.46,2.87-4.26,4.26-7.13c1.39-2.87,0.74-5.33-0.33-7.46c-1.07-2.13-9.68-23.29-13.28-31.90c-3.53-8.53-7.13-7.38-9.68-7.46c-2.46-0.08-5.33-0.08-8.20-0.08c-2.87,0.00-7.46,1.07-11.40,5.33c-3.94,4.26-15.01,14.68-15.01,35.75c0.00,21.07,15.33,41.41,17.47,44.28c2.13,2.87,30.18,46.17,73.14,64.70c10.25,4.43,18.20,7.05,24.44,9.02c10.25,3.28,19.68,2.79,27.06,1.72c8.28-1.23,25.26-10.33,28.78-20.34c3.53-10.00,3.53-18.53,2.46-20.34C312.33,283.80,309.46,283.06,305.20,280.93z" fill="#000000" filter="url(#element-shadow-filter)" transform="translate(1, 3.5)"/>
+  <path d="M305.20,280.93c-4.26-2.13-25.26-12.46-29.19-13.86c-3.94-1.39-6.81-2.13-9.68,2.13c-2.87,4.26-11.07,13.86-13.53,16.73c-2.46,2.87-5.00,3.20-9.27,1.07c-4.26-2.13-17.96-6.64-34.28-21.16c-12.63-11.32-21.24-25.26-23.70-29.52c-2.46-4.26-0.25-6.56,1.89-8.69c1.97-1.89,4.26-5.00,6.40-7.46c2.13-2.46,2.87-4.26,4.26-7.13c1.39-2.87,0.74-5.33-0.33-7.46c-1.07-2.13-9.68-23.29-13.28-31.90c-3.53-8.53-7.13-7.38-9.68-7.46c-2.46-0.08-5.33-0.08-8.20-0.08c-2.87,0.00-7.46,1.07-11.40,5.33c-3.94,4.26-15.01,14.68-15.01,35.75c0.00,21.07,15.33,41.41,17.47,44.28c2.13,2.87,30.18,46.17,73.14,64.70c10.25,4.43,18.20,7.05,24.44,9.02c10.25,3.28,19.68,2.79,27.06,1.72c8.28-1.23,25.26-10.33,28.78-20.34c3.53-10.00,3.53-18.53,2.46-20.34C312.33,283.80,309.46,283.06,305.20,280.93z" fill="url(#handset-fill-grad)"/>
+  <path d="M305.20,280.93c-4.26-2.13-25.26-12.46-29.19-13.86c-3.94-1.39-6.81-2.13-9.68,2.13c-2.87,4.26-11.07,13.86-13.53,16.73c-2.46,2.87-5.00,3.20-9.27,1.07c-4.26-2.13-17.96-6.64-34.28-21.16c-12.63-11.32-21.24-25.26-23.70-29.52c-2.46-4.26-0.25-6.56,1.89-8.69c1.97-1.89,4.26-5.00,6.40-7.46c2.13-2.46,2.87-4.26,4.26-7.13c1.39-2.87,0.74-5.33-0.33-7.46c-1.07-2.13-9.68-23.29-13.28-31.90c-3.53-8.53-7.13-7.38-9.68-7.46c-2.46-0.08-5.33-0.08-8.20-0.08c-2.87,0.00-7.46,1.07-11.40,5.33c-3.94,4.26-15.01,14.68-15.01,35.75c0.00,21.07,15.33,41.41,17.47,44.28c2.13,2.87,30.18,46.17,73.14,64.70c10.25,4.43,18.20,7.05,24.44,9.02c10.25,3.28,19.68,2.79,27.06,1.72c8.28-1.23,25.26-10.33,28.78-20.34c3.53-10.00,3.53-18.53,2.46-20.34C312.33,283.80,309.46,283.06,305.20,280.93z" fill="none" stroke="url(#handset-rim-grad)" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M305.20,280.93c-4.26-2.13-25.26-12.46-29.19-13.86c-3.94-1.39-6.81-2.13-9.68,2.13c-2.87,4.26-11.07,13.86-13.53,16.73c-2.46,2.87-5.00,3.20-9.27,1.07c-4.26-2.13-17.96-6.64-34.28-21.16c-12.63-11.32-21.24-25.26-23.70-29.52c-2.46-4.26-0.25-6.56,1.89-8.69c1.97-1.89,4.26-5.00,6.40-7.46c2.13-2.46,2.87-4.26,4.26-7.13c1.39-2.87,0.74-5.33-0.33-7.46c-1.07-2.13-9.68-23.29-13.28-31.90c-3.53-8.53-7.13-7.38-9.68-7.46c-2.46-0.08-5.33-0.08-8.20-0.08c-2.87,0.00-7.46,1.07-11.40,5.33c-3.94,4.26-15.01,14.68-15.01,35.75c0.00,21.07,15.33,41.41,17.47,44.28c2.13,2.87,30.18,46.17,73.14,64.70c10.25,4.43,18.20,7.05,24.44,9.02c10.25,3.28,19.68,2.79,27.06,1.72c8.28-1.23,25.26-10.33,28.78-20.34c3.53-10.00,3.53-18.53,2.46-20.34C312.33,283.80,309.46,283.06,305.20,280.93z" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.8" stroke-linejoin="round"/>
+
+  <g clip-path="url(#handset-clip-path)">
+    <ellipse cx="220" cy="180" rx="90" ry="30" fill="url(#gloss-reflection-grad)" transform="rotate(-40, 220, 180)"/>
+  </g>
+</svg>
