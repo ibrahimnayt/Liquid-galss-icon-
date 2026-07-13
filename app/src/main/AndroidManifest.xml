@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ibrahimnayt.liquidglass">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -15,15 +14,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <intent-filter>
-            <action android:name="com.novalauncher.THEME" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
-        <intent-filter>
-            <action android:name="org.adw.launcher.THEMES" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
 
         <meta-data android:name="com.novalauncher.theme.appfilter" android:resource="@xml/appfilter" />
 
