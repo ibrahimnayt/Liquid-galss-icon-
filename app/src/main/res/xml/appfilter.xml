@@ -16,4 +16,6 @@
 <item component="ComponentInfo{com.facebook.katana/com.facebook.katana.LoginActivity}" drawable="ic_facebook" />
 
 <item component="ComponentInfo{com.android.camera2/com.android.camera.CameraLauncher}" drawable="ic_camera" />
+
+    <item component="ComponentInfo{com.sec.android.app.camera/com.sec.android.app.camera.Camera}" drawable="ic_camera" />
 </resources>
