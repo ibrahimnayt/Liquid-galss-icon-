@@ -17,5 +17,24 @@
 
 <item component="ComponentInfo{com.android.camera2/com.android.camera.CameraLauncher}" drawable="ic_camera" />
 
+    <item component="ComponentInfo{com.sec.android.app.popupcalculator/com.sec.android.app.popupcalculator.Calculator}" drawable="ic_calculator" />
+
+<item component="ComponentInfo{com.sec.android.gallery3d/com.sec.android.gallery3d.app.GalleryLauncher}" drawable="ic_gallery" />
+<item component="ComponentInfo{com.samsung.android.gallery/com.samsung.android.gallery.app.GalleryActivity}" drawable="ic_gallery" />
+
+<item component="ComponentInfo{com.sec.android.app.clockpackage/com.sec.android.app.clockpackage.ClockPackage}" drawable="ic_clock" />
+
+<item component="ComponentInfo{com.samsung.android.app.contacts/com.samsung.android.app.contacts.activities.PeopleActivity}" drawable="ic_contacts" />
+
+<item component="ComponentInfo{com.samsung.android.messaging/com.samsung.android.messaging.ui.conversationlist.ConversationListActivity}" drawable="ic_message" />
+
+<item component="ComponentInfo{com.samsung.android.email.provider/com.samsung.android.email.ui.MessageListXLActivity}" drawable="ic_mail" />
+
+<item component="ComponentInfo{com.samsung.android.calendar/com.samsung.android.calendar.schedule.event.list.MoreEventListActivity}" drawable="ic_calendar" />
+
+<item component="ComponentInfo{com.sec.android.app.sbrowser/com.sec.android.app.sbrowser.SBrowserMainActivity}" drawable="ic_browser" />
+
+<item component="ComponentInfo{com.samsung.android.app.notes/com.samsung.android.app.notes.memolist.MemoListActivity}" drawable="ic_notes" />
+
     <item component="ComponentInfo{com.sec.android.app.camera/com.sec.android.app.camera.Camera}" drawable="ic_camera" />
 </resources>
