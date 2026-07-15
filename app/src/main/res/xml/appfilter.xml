@@ -37,4 +37,12 @@
 <item component="ComponentInfo{com.samsung.android.app.notes/com.samsung.android.app.notes.memolist.MemoListActivity}" drawable="ic_notes" />
 
     <item component="ComponentInfo{com.sec.android.app.camera/com.sec.android.app.camera.Camera}" drawable="ic_camera" />
+
+    <item component="ComponentInfo{com.google.android.apps.bard/com.google.android.apps.bard.boq.searchapp.main.MainActivity}" drawable="ic_gemini" />
+
+<!-- Messages (Google Messages) -->
+<item component="ComponentInfo{com.google.android.apps.messaging/com.google.android.apps.messaging.ui.conversationlist.ConversationListActivity}" drawable="ic_message" />
+
+<!-- Gaming Hub (Samsung Game Launcher) -->
+<item component="ComponentInfo{com.samsung.android.game.gamehome/com.samsung.android.game.gamehome.GameHomeActivity}" drawable="ic_gaminghub" />
 </resources>
