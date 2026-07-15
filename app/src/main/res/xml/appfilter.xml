@@ -45,4 +45,13 @@
 
 <!-- Gaming Hub (Samsung Game Launcher) -->
 <item component="ComponentInfo{com.samsung.android.game.gamehome/com.samsung.android.game.gamehome.GameHomeActivity}" drawable="ic_gaminghub" />
+
+    <!-- Samsung Messages (الأرجح على جهازك) -->
+<item component="ComponentInfo{com.samsung.android.messaging/com.samsung.android.messaging.ui.view.conversationlist.ConversationListActivity}" drawable="ic_message" />
+
+<!-- بديل لإصدارات One UI أقدم -->
+<item component="ComponentInfo{com.samsung.android.messaging/com.samsung.android.messaging.ui.MainActivity}" drawable="ic_message" />
+
+<!-- Google Messages (لو هو التطبيق الفعلي المستخدم) -->
+<item component="ComponentInfo{com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity}" drawable="ic_message" />
 </resources>
